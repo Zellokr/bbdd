@@ -1,0 +1,55 @@
+SQL> SELECT SQRT(32)
+  2  FROM DUAL;
+
+  SQRT(32)                                                                      
+----------                                                                      
+5.65685425                                                                      
+
+SQL> SELECT LENGTH(A)
+  2  FROM ASIGNATURA;
+
+ LENGTH(A)                                                                      
+----------                                                                      
+        13                                                                      
+        23                                                                      
+        18                                                                      
+        16                                                                      
+        18                                                                      
+         7                                                                      
+         7                                                                      
+        12                                                                      
+        18                                                                      
+        10                                                                      
+        25                                                                      
+
+ LENGTH(A)                                                                      
+----------                                                                      
+        17                                                                      
+
+12 rows selected.
+
+SQL> SELECT SYSDATE - TO_DATE('13-DEC-1994') AS DIAS
+  2  FROM DUAL;
+
+      DIAS                                                                      
+----------                                                                      
+8737.57564                                                                      
+
+SQL> SELECT ROUND(SYSDATE - TO_DATE('13-DEC-1994')) AS DIAS
+  2  FROM DUAL;
+
+      DIAS                                                                      
+----------                                                                      
+      8738                                                                      
+
+SQL> SELECT A
+  2  FROM ASIGNATURA NATURAL JOIN AREA
+  3  WHERE AR LIKE 'A%';
+
+A                                                                               
+--------------------------------------------------                              
+ALGEBRA                                                                         
+ANALISIS COMPLEJO                                                               
+ASTRONOMIA                                                                      
+
+SQL> SPOOL OFF
