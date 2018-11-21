@@ -1,0 +1,95 @@
+SQL> SELECT SYSDATE
+  2  FROM DUAL;
+
+SYSDATE                                                                         
+---------                                                                       
+21-NOV-18                                                                       
+
+SQL> SELECT TO_CHAR(SYSDATE, 'HH24;MI;SS')
+  2  FROM DUAL;
+
+TO_CHAR(                                                                        
+--------                                                                        
+13;36;49                                                                        
+
+SQL> SELECT TO_CHAR(SYSDATE, 'DAY:DD:MONTH:YEAR')
+  2  FROM DUAL;
+
+TO_CHAR(SYSDATE,'DAY:DD:MONTH:YEAR')                                            
+--------------------------------------------------------------------------------
+WEDNESDAY:21:NOVEMBER :TWENTY EIGHTEEN                                          
+
+SQL> SELECT TO_CHAR(SYSDATE, 'DAY:DD:MM:YY')
+  2  FROM DUAL;
+
+TO_CHAR(SYSDATE,'DAY:DD:MM:YY')                                                 
+---------------------------------------------                                   
+WEDNESDAY:21:11:18                                                              
+
+SQL> SELECT TO_CHAR(SYSDATE, 'DAY:DD:MM:YYYY')
+  2  FROM DUAL;
+
+TO_CHAR(SYSDATE,'DAY:DD:MM:YYYY')                                               
+-----------------------------------------------                                 
+WEDNESDAY:21:11:2018                                                            
+
+SQL> SELECT TO_CHAR(SYSDATE, 'DAY DE DD-MM-YYYY')
+  2  FROM DUAL;
+SELECT TO_CHAR(SYSDATE, 'DAY DE DD-MM-YYYY')
+       *
+ERROR at line 1:
+ORA-01822: era format code is not valid with this calendar 
+
+
+SQL> SELECT TO_CHAR(SYSDATE, 'DAY:DD-MM-YYYY')
+  2  FROM DUAL;
+
+TO_CHAR(SYSDATE,'DAY:DD-MM-YYYY')                                               
+-----------------------------------------------                                 
+WEDNESDAY:21-11-2018                                                            
+
+SQL> SELECT TO_CHAR(SYSDATE, 'HH24;MI;SS')
+  2  FROM DUAL;
+
+TO_CHAR(                                                                        
+--------                                                                        
+13;45;38                                                                        
+
+SQL> SELECT TO_CHAR(SYSDATE, 'DD')
+  2  
+SQL> 
+SQL> SELECT SYSDATE - FI
+  2  FROM PLAN_DOCENTE
+  3  WHERE FF IS NULL;
+
+SYSDATE-FI                                                                      
+----------                                                                      
+2638.57897                                                                      
+3003.57897                                                                      
+3368.57897                                                                      
+3368.57897                                                                      
+3368.57897                                                                      
+3733.57897                                                                      
+3368.57897                                                                      
+3003.57897                                                                      
+3157.57897                                                                      
+3368.57897                                                                      
+3733.57897                                                                      
+
+SYSDATE-FI                                                                      
+----------                                                                      
+3003.57897                                                                      
+3368.57897                                                                      
+
+13 rows selected.
+
+SQL> SELECT P
+  2  FROM PLAN_DOCENTE
+  3  WHERE FI > 365;
+SELECT P
+       *
+ERROR at line 1:
+ORA-00904: "P": invalid identifier 
+
+
+SQL> SPOOL OFF
